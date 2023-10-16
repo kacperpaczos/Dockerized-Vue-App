@@ -1,11 +1,13 @@
 version: '3.7'
 services:
   vue-app:
+    network_mode: "host"
     container_name: vue-node-app
     restart: always
     build:
       context: ./vue-app
       dockerfile: Dockerfile.dev
+      target: dev
     environment:
         - CHOKIDAR_USEPOLLING=true
         - PORT=${PORT}
