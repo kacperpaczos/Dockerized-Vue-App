@@ -13,14 +13,13 @@ Vue.js - The Progressive JavaScript Framework
 ✔ Add an End-to-End Testing Solution? › **No**
 ✔ Add ESLint for code quality? … **No** / Yes
 
-
-
-Run
+Dev run by:
 `npm install`
-
 `npm run format`
-
 `npm run dev`
 
-Run in docker-compose.yml
-COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose up -d --build
+To run in docker, use docker-compose.yml
+`COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker compose up --build`
+
+To stop, use this command in root folder:
+`docker compose down`
