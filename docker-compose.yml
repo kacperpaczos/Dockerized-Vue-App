@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  vue-app:
+    container_name: vue-node-app
+    restart: always
+    build:
+      context: ./vue-app
+      dockerfile: Dockerfile.dev
+    environment:
+        - CHOKIDAR_USEPOLLING=true
+        - PORT=${PORT}
+    ports:
+      - '8080:80' # prod
+      - '5137:5137' # dev
+    volumes:
+      - ./vue-app:/app:rw
+      - /app/node_modules
