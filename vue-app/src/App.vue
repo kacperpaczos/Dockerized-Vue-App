@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+
+const selectedOption = ref('')
 </script>
 
 <template>
@@ -14,6 +17,14 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
+
+      <o-radio-group v-model="selectedOption">
+        <o-radio label="Option 1">Option 1</o-radio>
+        <o-radio label="Option 2">Option 2</o-radio>
+        <o-radio label="Option 3">Option 3</o-radio>
+      </o-radio-group>
+
+      <p>Wybrano opcję: {{ selectedOption }}</p>
     </div>
   </header>
 
