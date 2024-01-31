@@ -10,9 +10,11 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
+    "@intlify/unplugin-vue-i18n": "^2.0.0",
     "pinia": "^2.1.6",
     "pinia-plugin-persistedstate": "^3.2.1",
     "vue": "^3.3.4",
+    "vue-i18n": "^9.9.1",
     "vue-router": "^4.2.4",
     "vuetify": "^3.5.2"
   },
